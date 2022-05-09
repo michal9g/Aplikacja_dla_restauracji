@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="770.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.WorkTimeController">
+   <children>
+      <Button fx:id="returnButtonSchedule" layoutX="665.0" layoutY="455.0" mnemonicParsing="false" onAction="#returnButtonOnAction" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #d94214;" text="Powrót" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #d7ccc8;">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="43.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/date.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="startDateTextField" layoutX="26.0" layoutY="275.0" prefHeight="25.0" prefWidth="149.0" />
+            <DatePicker fx:id="stopDateTextField" layoutX="26.0" layoutY="334.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="searchButton" layoutX="26.0" layoutY="386.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #d94214;" text="Szukaj" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="26.0" layoutY="308.0" text="Data końca:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="250.0" text="Data początku:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="188.0" text="ID pracownika:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="clearButton" layoutX="109.0" layoutY="386.0" mnemonicParsing="false" onAction="#clearButtonOnAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #d94214;" text="Wyczyść" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorMessageLabel" layoutX="42.0" layoutY="161.0" textFill="RED" />
+            <ComboBox fx:id="employeeBox" layoutX="25.0" layoutY="214.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="workTimeTable" layoutX="227.0" layoutY="30.0" prefHeight="389.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="idWorkTimeTable" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nameWorkTimeTable" prefWidth="75.0" text="Imie" />
+            <TableColumn fx:id="lastnameWorkTimeTable" prefWidth="75.0" text="Nazwisko" />
+            <TableColumn fx:id="startWorkTimeTable" prefWidth="148.79998779296875" text="Start pracy" />
+            <TableColumn fx:id="stopWorkTimeTable" prefWidth="148.79998779296875" text="Koniec pracy" />
+        </columns>
+      </TableView>
+      <Label fx:id="workingTimeMessageLabel" layoutX="227.0" layoutY="437.0" />
+   </children>
+</AnchorPane>

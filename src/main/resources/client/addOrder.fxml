@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="395.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.AddOrderController">
+   <children>
+      <Pane prefHeight="395.0" prefWidth="127.0" style="-fx-background-color: #d7ccc8;">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="132.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ComboBox fx:id="nameMenuBox" layoutX="145.0" layoutY="247.0" prefWidth="150.0" />
+      <TextField fx:id="numberTextField" layoutX="306.0" layoutY="246.0" prefHeight="26.0" prefWidth="74.0" stylesheets="@../../css/style.css" />
+      <TableView fx:id="orderTable" layoutX="145.0" layoutY="22.0" prefHeight="178.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="nameOrderTable" prefWidth="220.0" text="Nazwa Pozycji" />
+            <TableColumn fx:id="numberOrderTable" prefWidth="130.0" text="Ilość" />
+         </columns>
+      </TableView>
+      <Button layoutX="396.0" layoutY="246.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #d94214;" text="Dodaj" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="145.0" layoutY="225.0" text="Pozycja z menu:" />
+      <Label layoutX="308.0" layoutY="225.0" text="Ilość:" />
+      <Label layoutX="306.0" layoutY="282.0" text="Nr. stolika:" />
+      <TextField fx:id="tableNumberTextField" layoutX="306.0" layoutY="302.0" prefHeight="26.0" prefWidth="74.0" stylesheets="@../../css/style.css" />
+      <Label layoutX="145.0" layoutY="282.0" text="Czy na miejscu:" />
+      <ComboBox fx:id="locationBox" layoutX="145.0" layoutY="303.0" prefWidth="150.0" />
+      <Button layoutX="145.0" layoutY="347.0" mnemonicParsing="false" onAction="#createOrderButtonOnAction" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #d94214;" text="Stwórz zamówienie" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageLabel" layoutX="145.0" layoutY="200.0" textFill="RED" />
+      <Button fx:id="clear" layoutX="306.0" layoutY="347.0" mnemonicParsing="false" onAction="#clearButtonOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #d94214;" text="Wyczyść" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

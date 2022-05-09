@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#showMenuTable" prefHeight="500.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.MenuController">
+   <children>
+      <Button fx:id="returnButtonMenu" layoutX="665.0" layoutY="455.0" mnemonicParsing="false" onAction="#returnButtonOnAction" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #d94214;" text="Powrót" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Pane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #d7ccc8;">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="44.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/menuImage.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="48.0" layoutY="376.0" mnemonicParsing="false" onAction="#addMenuButtonOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #d94214;" text="Dodaj pozycję" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Line endX="59.40000915527344" layoutX="107.0" layoutY="356.0" startX="-76.50000762939453" stroke="#d94214" />
+            <Button layoutX="24.0" layoutY="305.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #d94214;" text="Usuń " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="108.0" layoutY="305.0" mnemonicParsing="false" onAction="#editMenuButtonOnAction" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #d94214;" text="Edytuj" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="25.0" layoutY="188.0" text="ID pozycji:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="idBox" layoutX="25.0" layoutY="205.0" prefWidth="150.0" />
+            <Label layoutX="25.0" layoutY="242.0" text="Nowa cena:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="priceTextField" layoutX="25.0" layoutY="259.0" stylesheets="@../../css/style.css" />
+            <Label fx:id="errorMessageLabel" layoutX="41.0" layoutY="165.0" textFill="RED" />
+         </children>
+      </Pane>
+      <TableView fx:id="menuTable" layoutX="227.0" layoutY="30.0" prefHeight="389.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="idMenuTable" prefWidth="120.0" text="ID pozycji:" />
+          <TableColumn fx:id="nameMenuTable" prefWidth="140.0" text="Nazwa" />
+            <TableColumn fx:id="typeMenuTable" prefWidth="130.0" text="Typ pozycji" />
+            <TableColumn fx:id="priceMenuTable" prefWidth="130.0" text="Cena" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
