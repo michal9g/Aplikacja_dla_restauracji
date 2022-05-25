@@ -99,7 +99,7 @@ public class DataManager {
     public static LinkedList<ReceiptMessage>  getReceipt(Object object){
         ReceiptMessage mess = (ReceiptMessage) object;
         LinkedList<ReceiptMessage> inList = new LinkedList<>();
-        String query = "SELECT id,value_n,value_b, " +
+        String query = "SELECT id,ROUND(value_n,2),value_b, " +
                 "type_of_payment, DATE_FORMAT(date_rec, '%Y.%m.%d') AS 'date_rec' FROM receipt " +
                 "WHERE date_rec BETWEEN '"+mess.getStart()+"' AND '"+mess.getStop()+"';";
         ResultSet rs = executeQuery(query);
@@ -117,9 +117,8 @@ public class DataManager {
     public static ReceiptReportMessage getReceiptReport(Object object){
         ReceiptReportMessage mess = (ReceiptReportMessage) object;
         ReceiptReportMessage receiptReport = null;
-        String query = "SELECT ROUND(SUM(value_n)+SUM(value_b),2), ROUND(SUM(value_b)-SUM(value_n),2)," +
-                "SUM(discount) FROM receipt " +
-                "WHERE date_rec BETWEEN '"+mess.getStart()+"' AND '"+mess.getStop()+"';";
+        String query = "SELECT SUM(value_b), ROUND(SUM(value_n),2)," +
+                "SUM(discount) FROM receipt " + "WHERE date_rec BETWEEN '"+mess.getStart()+"' AND '"+mess.getStop()+"';";
         ResultSet rs = executeQuery(query);
         try {
             while(rs.next()){

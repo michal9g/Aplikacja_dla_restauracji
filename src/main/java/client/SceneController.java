@@ -13,9 +13,9 @@ public class SceneController{
 
     public void openHomePage() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/home.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
             Stage homeStage = new Stage();
-            homeStage.setTitle("Ciekawa");
+            homeStage.setTitle("XYZ");
             homeStage.setScene(new Scene(root, 770, 500));
             homeStage.getIcons().add(new Image("image/cafe.png"));
             homeStage.setResizable(false);
@@ -28,7 +28,7 @@ public class SceneController{
 
     public void loginPage(){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
             Stage loginStage = new Stage();
             loginStage.initStyle(StageStyle.UNDECORATED);
             loginStage.setScene(new Scene(root, 520, 400));
@@ -42,7 +42,7 @@ public class SceneController{
 
     public void switchToHomePage(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/home.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
             Scene homePage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(homePage);
@@ -55,7 +55,7 @@ public class SceneController{
 
     public void switchToMenu(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/menu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene menuPage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(menuPage);
@@ -68,7 +68,7 @@ public class SceneController{
 
     public void switchToSchedule(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/schedule.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("schedule.fxml"));
             Scene schedulePage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(schedulePage);
@@ -81,7 +81,7 @@ public class SceneController{
 
     public void switchToOrder(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/order.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("order.fxml"));
             Scene orderPage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(orderPage);
@@ -94,7 +94,7 @@ public class SceneController{
 
     public void switchToReservation(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/reservation.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("reservation.fxml"));
             Scene reservationPage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(reservationPage);
@@ -106,7 +106,7 @@ public class SceneController{
     }
     public void switchToReceipt(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/receipt.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("receipt.fxml"));
             Scene receiptPage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(receiptPage);
@@ -119,7 +119,7 @@ public class SceneController{
 
     public void switchToWorkTime(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/worktime.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("worktime.fxml"));
             Scene worktimePage = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(worktimePage);
@@ -132,7 +132,7 @@ public class SceneController{
 
     public void openAddMenuWindow() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/addMenu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("addMenu.fxml"));
             Stage addMenuStage = new Stage();
             addMenuStage.setScene(new Scene(root, 372, 300));
             addMenuStage.getIcons().add(new Image("image/cafe.png"));
@@ -146,7 +146,7 @@ public class SceneController{
 
     public void openAddCustomerWindow() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/addCustomer.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("addCustomer.fxml"));
             Stage addCustomerStage = new Stage();
             addCustomerStage.setScene(new Scene(root, 372, 300));
             addCustomerStage.getIcons().add(new Image("image/cafe.png"));
@@ -160,7 +160,7 @@ public class SceneController{
 
     public void openAddOrderWindow() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("graphics/addOrder.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("addOrder.fxml"));
             Stage addOrderStage = new Stage();
             addOrderStage.setScene(new Scene(root, 515, 395));
             addOrderStage.getIcons().add(new Image("image/cafe.png"));
